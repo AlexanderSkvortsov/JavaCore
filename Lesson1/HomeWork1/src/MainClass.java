@@ -3,10 +3,9 @@ import Competitors.CompetitionClass;
 import Competitors.HumanClass;
 import Competitors.RobotClass;
 import Obstacle.ObstacleClass;
-import Obstacle.ObstacleType;
 import Obstacle.RaceTrackClass;
 import Obstacle.WallClass;
-import Statdiion.StadionClass;
+import Statdion.StadionClass;
 
 public class MainClass {
     public static void main(String[] args) {
@@ -18,11 +17,13 @@ public class MainClass {
                                             new CatClass("Мурзик",5000,2000)
                                           };
 
+        StadionClass stadion = new StadionClass();
 
         for (CompetitionClass c: competitors) {
             for (ObstacleClass o : obstacles) {
 
-                StadionClass stadion = new StadionClass(c,o);
+                stadion.setCompetitor(c);
+                stadion.setObstacle(o);
 
                 if (!stadion.startCompetition()){
                     break;
