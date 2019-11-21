@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="345a6fdf-f7a9-4f7b-ab30-3e59e1c30c03" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Statdion/StadionClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statdion/StadionClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HomeWork2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HomeWork2/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Statdion/StadionClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="416">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#262#263#0" expanded="true" />
@@ -157,8 +155,8 @@
         <option value="$PROJECT_DIR$/src/Competitors/RobotClass.java" />
         <option value="$PROJECT_DIR$/src/Competitors/HumanClass.java" />
         <option value="$PROJECT_DIR$/src/Statdiion/StadionClass.java" />
-        <option value="$PROJECT_DIR$/src/Statdion/StadionClass.java" />
         <option value="$PROJECT_DIR$/src/MainClass.java" />
+        <option value="$PROJECT_DIR$/src/Statdion/StadionClass.java" />
       </list>
     </option>
   </component>
@@ -256,7 +254,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28556702" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28556702" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -390,8 +388,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Statdion/StadionClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="416">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#262#263#0" expanded="true" />

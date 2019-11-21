@@ -20,8 +20,6 @@ public class StadionClass {
             return ;
         }
 
-        boolean result = true;
-
         for (ObstacleClass o : obstacles) {
             ObstacleType obstacleType = o.getObstacleType();
             int obstacleValue = o.getObstacleValue();
@@ -30,7 +28,7 @@ public class StadionClass {
             if (o.getObstacleType() == ObstacleType.WALL) competitor.jump();
             else competitor.run();
 
-            result = competitorValue >= obstacleValue;
+            boolean result = competitorValue >= obstacleValue;
 
             System.out.println("The result is " + (result ? "OK!" : "FAIL!"));
             if (! result) break;
