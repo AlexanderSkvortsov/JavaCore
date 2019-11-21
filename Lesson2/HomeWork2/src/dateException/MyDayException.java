@@ -1,19 +1,16 @@
 package dateException;
 
-public class MyDateException extends Exception {
-    int day, month;
+public class MyDayException extends MyMonthException {
+    int day;
 
-    public MyDateException(String message, int date, int month) {
-        super(message);
-        this.day = date;
-        this.month = month;
+    public MyDayException(String message, int day, int month) {
+        super(message,month);
+        this.day = day;
+
     }
 
     public int getDay() {
         return day;
     }
 
-    public int getMonth() {
-        return month;
-    }
 }
