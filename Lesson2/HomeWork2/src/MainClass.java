@@ -17,18 +17,17 @@ public class MainClass {
         calendar.set(Calendar.MONTH,month-1);
         int daysQty = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 
-        if ((day > daysQty ) || (day < 0)){
+        if ((day > daysQty ) || (day <=0)){
             throw new MyDayException("День вне диапазона",day,month);
 
         }
-
-        System.out.println("День "+day+" месяц "+month+".");
 
     }
 
     static void printDate(int day, int month, int year){
         try {
             checkDate(day,month,year);
+            System.out.println("День "+day+" месяц "+month+".");
         } catch (MyDayException e) {
 //            e.printStackTrace();
             System.out.println("Исключение:Неверная дата "+e.getDay()+"."+e.getMonth());
