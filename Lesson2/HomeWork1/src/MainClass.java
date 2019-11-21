@@ -3,9 +3,21 @@ import myException.MyArraySizeException;
 
 public class MainClass {
 
+    private static  final int MAX_ARRAY_SIZE =4;
+
     private  static int checkArray (char [][] myArray) throws MyArraySizeException, MyArrayDataException {
 
-        if ((myArray.length > 4) || (myArray[0].length>4)) throw new MyArraySizeException("Недопустимый размер массива.");
+
+        if (myArray.length > MAX_ARRAY_SIZE) {
+            throw new MyArraySizeException("Недопустимый размер массива.");
+        }
+
+        for(int i=0;i<myArray.length;i++){
+
+            if (myArray[i].length>MAX_ARRAY_SIZE){
+                throw new MyArraySizeException("Недопустимый размер массива.");
+            }
+        }
 
         int totalAmount =0;
 
@@ -16,7 +28,7 @@ public class MainClass {
                     totalAmount+= Integer.parseInt(String.valueOf(myArray[i][j]));
                 }
                 catch (NumberFormatException e){
-                    throw new MyArrayDataException("Недопустимые данные в строке "+(i+1)+" столбце "+(j+1));
+                    throw new MyArrayDataException("Недопустимые данные в строке ",(i+1),(j+1));
                 }
             }
         }
@@ -31,8 +43,12 @@ public class MainClass {
         try {
             total = checkArray(myArray);
 
-        } catch (MyArraySizeException|MyArrayDataException e) {
-            System.out.println("Исключение: " + e.getMessage());
+        } catch (MyArrayDataException e)
+        {
+            System.out.println("Исключение: " + e.getMessage()+ " строка "+e.getRow()+" столбец "+e.getCol());
+        }
+         catch (MyArraySizeException e) {
+            System.out.println("Исключение: " + e.getMessage()+ " Максиманый размер "+ MAX_ARRAY_SIZE+"x"+MAX_ARRAY_SIZE);
         }
         finally {
             System.out.println("Сумма равна: " +total);
