@@ -5,36 +5,36 @@ import Obstacle.ObstacleClass;
 import Obstacle.ObstacleType;
 
 public class StadionClass {
-    CompetitionClass competitor;
-    ObstacleClass obstacle;
 
-    public void setCompetitor(CompetitionClass competitor) {
-        this.competitor = competitor;
-    }
+    ObstacleClass[] obstacles=null;
 
-    public void setObstacle(ObstacleClass obstacle) {
-        this.obstacle = obstacle;
+    public StadionClass(ObstacleClass[] obstacles) {
+        this.obstacles = obstacles;
     }
 
 
-    public boolean startCompetition(){
+    public void  startCompetition(CompetitionClass competitor){
 
-        if ((obstacle == null) || (competitor == null)) {
+        if ((obstacles == null) || (competitor == null)) {
             System.out.println("Error, objects are not ready.");
-            return false;
+            return ;
         }
 
-        ObstacleType obstacleType = obstacle.getObstacleType();
-        int obstacleValue =obstacle.getObstacleValue();
-        int competitorValue = (obstacleType== ObstacleType.WALL)? competitor.getMaxHeight():competitor.getMaxDistance();
+        boolean result = true;
 
-        if (obstacle.getObstacleType()== ObstacleType.WALL) competitor.jump();
-         else competitor.run();
+        for (ObstacleClass o : obstacles) {
+            ObstacleType obstacleType = o.getObstacleType();
+            int obstacleValue = o.getObstacleValue();
+            int competitorValue = (obstacleType == ObstacleType.WALL) ? competitor.getMaxHeight() : competitor.getMaxDistance();
 
-        boolean result = competitorValue>=obstacleValue;
+            if (o.getObstacleType() == ObstacleType.WALL) competitor.jump();
+            else competitor.run();
 
-        System.out.println( "The result is " + (result ? "OK!":"FAIL!"));
+            result = competitorValue >= obstacleValue;
 
-        return result;
+            System.out.println("The result is " + (result ? "OK!" : "FAIL!"));
+            if (! result) break;
+        }
+
     }
 }
